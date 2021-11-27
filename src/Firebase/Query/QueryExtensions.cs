@@ -82,9 +82,9 @@ namespace Firebase.Database.Query
         /// <param name="child"> Current node. </param>
         /// <param name="value"> Value to start at. </param>
         /// <returns> The <see cref="FilterQuery"/>. </returns>
-        public static FilterQuery EndAt(this ParameterQuery child, string value)
+        public static FilterQuery EndAt(this ParameterQuery child,int value, string ID)
         {
-            return child.EndAt(() => value);
+            return child.EndAt(() => value+","+'"'+ID+'"');
         }
 
         /// <summary>
